@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message Expression{
+ float operand1 = 1;
+ float operand2 = 2;
+ string operator = 3;
+}
+
+service ExecuteExpression{
+    rpc ExecExp(Expression) returns (Expression){}
+}
+/*python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. calculator.proto*/

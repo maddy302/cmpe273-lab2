@@ -1,0 +1,1 @@
+write a add function, and try to access it via RPC
